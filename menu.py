@@ -129,10 +129,8 @@ while place_order:
                 if customer_menu_selection in menu_items.keys():
                     # Store the item name as a variable
                     customer_menu_item_name = menu_items[customer_menu_selection]['Item name']
-                    print(customer_menu_item_name)
                     # Storing the item price as a variable
                     customer_menu_item_price = menu_items[customer_menu_selection]["Price"]
-                    print(f"Price is ${customer_menu_item_price}")
                     # Ask the customer for the quantity of the menu item
                     quantity = input(f"How many {customer_menu_item_name}(s) would you like to order? ")
 
@@ -154,7 +152,8 @@ while place_order:
                 # Tell the customer they didn't select a menu option
                 else:
                     print(f"{customer_menu_selection} is not a menu option")
-
+            else: 
+                print(f"{customer_choice} was not valid. Please select a number")    
         else:
             # Tell the customer they didn't select a menu option
             print(f"{menu_category} was not a menu option.")
