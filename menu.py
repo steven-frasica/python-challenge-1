@@ -135,19 +135,19 @@ while place_order:
                     quantity = input(f"How many {customer_menu_item_name}(s) would you like to order? ")
 
                     # Check if the quantity is a number, default to 1 if not
+                    customer_order_quantity = 1
                     if quantity.isdigit():
                         customer_order_quantity = int(quantity)
-                    # Add the item name, price, and quantity to the order list
-                        order.append({
-                            "Item name": customer_menu_item_name,
-                            "Price": customer_menu_item_price,
-                            "Quantity": customer_order_quantity
-                        })
-
+           
                     # Tell the customer that their input isn't valid
                     else:
-                        customer_order_quantity = 1
                         print(f"Your order quantity {quantity} was not valid. An order of 1 will be placed.")
+                    # Add the item name, price, and quantity to the order list
+                    order.append({
+                        "Item name": customer_menu_item_name,
+                        "Price": customer_menu_item_price,
+                        "Quantity": customer_order_quantity
+                    })
 
                 # Tell the customer they didn't select a menu option
                 else:
