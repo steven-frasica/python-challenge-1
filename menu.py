@@ -167,7 +167,6 @@ while place_order:
 
         # 5. Check the customer's input
         match keep_ordering:
-
                 # Keep ordering
             case 'Y':
                 place_order = True
